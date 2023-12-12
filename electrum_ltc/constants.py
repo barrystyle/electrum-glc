@@ -61,7 +61,8 @@ class AbstractNet:
 
     @classmethod
     def max_checkpoint(cls) -> int:
-        return max(0, len(cls.CHECKPOINTS) * 2016 - 1)
+        #return max(0, len(cls.CHECKPOINTS) * 2016 - 1)
+        return 0
 
     @classmethod
     def rev_genesis_bytes(cls) -> bytes:
@@ -72,16 +73,16 @@ class BitcoinMainnet(AbstractNet):
 
     NET_NAME = "mainnet"
     TESTNET = False
-    WIF_PREFIX = 0x80
-    ADDRTYPE_P2PKH = 48
+    WIF_PREFIX = 0xa0
+    ADDRTYPE_P2PKH = 32
     ADDRTYPE_P2SH = 50
-    SEGWIT_HRP = "ltc"
+    SEGWIT_HRP = "glc"
     BOLT11_HRP = SEGWIT_HRP
-    GENESIS = "12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2"
+    GENESIS = "dced3542896ed537cb06f9cb064319adb0da615f64dd8c5e5bad974398f44b24"
     DEFAULT_PORTS = {'t': '50001', 's': '50002'}
     DEFAULT_SERVERS = read_json('servers.json', {})
     CHECKPOINTS = read_json('checkpoints.json', [])
-    BLOCK_HEIGHT_FIRST_LIGHTNING_CHANNELS = 497000
+    BLOCK_HEIGHT_FIRST_LIGHTNING_CHANNELS = 4294967296
 
     XPRV_HEADERS = {
         'standard':    0x0488ade4,  # xprv
@@ -99,10 +100,9 @@ class BitcoinMainnet(AbstractNet):
         'p2wsh':       0x02aa7ed3,  # Zpub
     }
     XPUB_HEADERS_INV = inv_dict(XPUB_HEADERS)
-    BIP44_COIN_TYPE = 2
+    BIP44_COIN_TYPE = 0
     LN_REALM_BYTE = 0
     LN_DNS_SEEDS = [
-        'ltc.nodes.lightning.directory.',
     ]
 
 
