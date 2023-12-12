@@ -79,15 +79,15 @@ Item {
                 icon.source: '../../icons/network.png'
             }
         }
-        MenuItem {
-            icon.color: 'transparent'
-            action: Action {
-                text: qsTr('Channels');
-                enabled: Daemon.currentWallet && Daemon.currentWallet.isLightning
-                onTriggered: menu.openPage(Qt.resolvedUrl('Channels.qml'))
-                icon.source: '../../icons/lightning.png'
-            }
-        }
+        #MenuItem {
+        #    icon.color: 'transparent'
+        #    action: Action {
+        #        text: qsTr('Channels');
+        #        enabled: Daemon.currentWallet && Daemon.currentWallet.isLightning
+        #        onTriggered: menu.openPage(Qt.resolvedUrl('Channels.qml'))
+        #        icon.source: '../../icons/lightning.png'
+        #    }
+        #}
 
         MenuItem {
             icon.color: 'transparent'
