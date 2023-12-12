@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# scrypt.py - basic implementation of Litecoin's proof-of-work algorithm
+# scrypt.py - basic implementation of Goldcoin's proof-of-work algorithm
 # Copyright (C) 2014, 2017 pooler@litecoinpool.org
 #
 # This program is free software: you can redistribute it and/or modify

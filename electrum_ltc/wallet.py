@@ -690,7 +690,7 @@ class Abstract_Wallet(ABC, Logger, EventListener):
         if self.is_watching_only():
             raise Exception(_("This is a watching-only wallet"))
         if not is_address(address):
-            raise Exception(f"Invalid Litecoin address: {address}")
+            raise Exception(f"Invalid Goldcoin address: {address}")
         if not self.is_mine(address):
             raise Exception(_('Address not in wallet.') + f' {address}')
         index = self.get_address_index(address)
@@ -2643,7 +2643,7 @@ class Abstract_Wallet(ABC, Logger, EventListener):
         pass
 
     def price_at_timestamp(self, txid, price_func):
-        """Returns fiat price of Litecoin at the time tx got confirmed."""
+        """Returns fiat price of Goldcoin at the time tx got confirmed."""
         timestamp = self.adb.get_tx_height(txid).timestamp
         return price_func(timestamp if timestamp else time.time())
 

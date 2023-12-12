@@ -1070,7 +1070,7 @@ def create_bip21_uri(addr, amount_sat: Optional[int], message: Optional[str],
 
 def maybe_extract_lightning_payment_identifier(data: str) -> Optional[str]:
     data = data.strip()  # whitespaces
-    # Litecoin: legacy addresses may start with 'LN'
+    # Goldcoin: legacy addresses may start with 'LN'
     if len(data) < 40:
         return None
     data = data.lower()

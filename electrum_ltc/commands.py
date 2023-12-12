@@ -264,8 +264,8 @@ class Commands:
     @command('')
     async def restore(self, text, passphrase=None, password=None, encrypt_file=True, wallet_path=None):
         """Restore a wallet from text. Text can be a seed phrase, a master
-        public key, a master private key, a list of Litecoin addresses
-        or Litecoin private keys.
+        public key, a master private key, a list of Goldcoin addresses
+        or Goldcoin private keys.
         If you want to be prompted for an argument, type '?' or ':' (concealed)
         """
         # TODO create a separate command that blocks until wallet is synced
@@ -1333,8 +1333,8 @@ def eval_bool(x: str) -> bool:
 
 param_descriptions = {
     'privkey': 'Private key. Type \'?\' to get a prompt.',
-    'destination': 'Litecoin address, contact or alias',
-    'address': 'Litecoin address',
+    'destination': 'Goldcoin address, contact or alias',
+    'address': 'Goldcoin address',
     'seed': 'Seed phrase',
     'txid': 'Transaction ID',
     'pos': 'Position',
