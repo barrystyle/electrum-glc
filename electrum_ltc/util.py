@@ -826,46 +826,16 @@ def time_difference(distance_in_time, include_seconds):
         return "over %d years" % (round(distance_in_minutes / 525600))
 
 mainnet_block_explorers = {
-    'Bitaps.com': ('https://ltc.bitaps.com/',
-                        {'tx': '', 'addr': ''}),
-    'Blockchair.com': ('https://blockchair.com/litecoin/',
-                        {'tx': 'transaction/', 'addr': 'address/'}),
-    'Blockchair.com (Tor)': ('http://blkchairbknpn73cfjhevhla7rkp4ed5gg2knctvv7it4lioy22defid.onion/litecoin/',
-                        {'tx': 'transaction/', 'addr': 'address/'}),
-    'BlockCypher.com': ('https://live.blockcypher.com/ltc/',
-                        {'tx': 'tx/', 'addr': 'address/'}),
-    'explorer.litecoin.net': ('http://explorer.litecoin.net/',
-                        {'tx': 'tx/', 'addr': 'address/'}),
-    'LiteCore': ('https://insight.litecore.io/',
-                        {'tx': 'tx/', 'addr': 'address/'}),
-    'SoChain': ('https://chain.so/',
-                        {'tx': 'tx/LTC/', 'addr': 'address/LTC/'}),
-    'system default': ('blockchain://12a765e31ffd4059bada1e25190f6e98c99d9714d334efa41a195a7e7e04bfe2/',
-                        {'tx': 'tx/', 'addr': 'address/'}),
+    'cryptoID': ('https://chainz.cryptoid.info/glc',
+                        {'tx': 'tx.dws?', 'addr': 'address.dws?'}),
+    'system default': ('https://chainz.cryptoid.info/glc',
+                        {'tx': 'tx.dws?', 'addr': 'address.dws?'}),
 }
 
 testnet_block_explorers = {
-    'Bitaps.com': ('https://tltc.bitaps.com/',
-                       {'tx': '', 'addr': ''}),
-    'LiteCore': ('https://testnet.litecore.io/',
-                        {'tx': 'tx/', 'addr': 'address/'}),
-    'SoChain': ('https://chain.so/',
-                        {'tx': 'tx/LTCTEST/', 'addr': 'address/LTCTEST/'}),
-    'system default': ('blockchain://4966625a4b2851d9fdee139e56211a0d88575f59ed816ff5e6a63deb4e3e29a0/',
-                       {'tx': 'tx/', 'addr': 'address/'}),
 }
 
 signet_block_explorers = {
-    'bc-2.jp': ('https://explorer.bc-2.jp/',
-                        {'tx': 'tx/', 'addr': 'address/'}),
-    'mempool.space': ('https://mempool.space/signet/',
-                        {'tx': 'tx/', 'addr': 'address/'}),
-    'bitcoinexplorer.org': ('https://signet.bitcoinexplorer.org/',
-                       {'tx': 'tx/', 'addr': 'address/'}),
-    'wakiyamap.dev': ('https://signet-explorer.wakiyamap.dev/',
-                       {'tx': 'tx/', 'addr': 'address/'}),
-    'system default': ('blockchain:/',
-                       {'tx': 'tx/', 'addr': 'address/'}),
 }
 
 _block_explorer_default_api_loc = {'tx': 'tx/', 'addr': 'address/'}
